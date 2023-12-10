@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/isEvenMode.js'; // isEvenMode
+import '../src/evenMode.js'; // isEvenMode
