@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/cli.js'; // meeting
+import '../src/core/cli.js'; // meeting
