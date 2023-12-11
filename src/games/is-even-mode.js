@@ -1,5 +1,5 @@
-import randomNumber from '../core/getRandomNumber.js';
-import brainLogic from '../core/main-logic.js';
+import gameLogic from '../game-core/logic.js';
+import randomNumber from '../helpers/get-random-number.js';
 
 const maxNumber = 100;
 let countAnswers = 0;
@@ -12,5 +12,5 @@ do {
   const question = randomNumber(maxNumber);
   const rightAnswer = question % 2 === 0 ? 'yes' : 'no';
   countAnswers += 1;
-  flag = (brainLogic(question, rightAnswer, countAnswers));
+  flag = (gameLogic(question, rightAnswer, countAnswers));
 } while (flag);

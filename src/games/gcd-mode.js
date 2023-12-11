@@ -1,11 +1,10 @@
-import brainLogic from '../core/main-logic.js';
-import randomNumber from '../core/getRandomNumber.js';
-import gcd from '../core/getGcd.js';
+import gameLogic from '../game-core/logic.js';
+import randomNumber from '../helpers/get-random-number.js';
+import gcd from '../helpers/get-gcd.js';
 
 const maxNumber = 100;
 let countAnswers = 0;
 let flag = true;
-let rightAnswer = 0;
 
 // gcdMode parameters
 
@@ -14,7 +13,7 @@ do {
   const firstNum = randomNumber(maxNumber);
   const secondNum = randomNumber(maxNumber);
   const question = `${firstNum} ${secondNum}`;
-  rightAnswer = gcd(firstNum, secondNum).toString();
+  const rightAnswer = gcd(firstNum, secondNum).toString();
   countAnswers += 1;
-  flag = (brainLogic(question, rightAnswer, countAnswers));
+  flag = (gameLogic(question, rightAnswer, countAnswers));
 } while (flag);

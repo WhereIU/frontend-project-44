@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/core/meeting-API.js'; // meeting
+import '../src/game-core/meet-user.js'; // meeting
