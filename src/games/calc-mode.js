@@ -1,6 +1,6 @@
-import brainLogic from '../core/brain-LOGIC.js';
-import randomNumber from '../core/randomNumber.js';
-import calculate from '../core/calculate.js';
+import brainLogic from '../core/main-logic.js';
+import randomNumber from '../core/getRandomNumber.js';
+import calculate from '../core/getCalc-result.js';
 
 const maxNumber = 100;
 const maxSign = 3;

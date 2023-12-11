@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/games/calcMode.js'; // calcMode
+import '../src/games/calc-mode.js'; // calcMode

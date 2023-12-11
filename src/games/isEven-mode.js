@@ -1,5 +1,5 @@
-import randomNumber from '../core/randomNumber.js';
-import brainLogic from '../core/brain-LOGIC.js';
+import randomNumber from '../core/getRandomNumber.js';
+import brainLogic from '../core/main-logic.js';
 
 const maxNumber = 100;
 let countAnswers = 0;

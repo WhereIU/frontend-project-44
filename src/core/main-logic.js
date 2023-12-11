@@ -1,5 +1,5 @@
-import yourName from './cli.js';
-import API from './brain-API.js';
+import yourName from './meeting-API.js';
+import API from './question-API.js';
 
 export default (mainQuestion, rightAnswer, countAnswers) => {
   const yourAnswer = API(mainQuestion);
