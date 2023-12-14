@@ -6,6 +6,8 @@ install:
 +x-chmod:
 	chmod +x bin/brain-games.js
 	chmod +x bin/brain-even.js
+	chmod +x bin/brain-calc.js
+	chmod +x bin/brain-progression.js
 
 publish:
 	npm publish --dry-run
@@ -25,10 +27,13 @@ brain-calc:
 brain-gcd:
 	node bin/brain-gcd.js
 
+brain-progression:
+	node /bin/brain-progression.js
+
 lint:
 	npx eslint .
 
 lint-fix:
 	npx eslint . --fix
 
-.PHONY: setup install +x-chmod publish link brain-games brain-even brain-calc brain-gcd lint lint-fix
+.PHONY: setup install +x-chmod publish link brain-games brain-even brain-calc brain-gcd brain-progression lint lint-fix
