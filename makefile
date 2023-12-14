@@ -1,9 +1,9 @@
-setup: install rules publish link
+setup: install +x-chmod publish link
 
 install:
 	npm ci
 
-rules:
++x-chmod:
 	chmod +x bin/brain-games.js
 	chmod +x bin/brain-even.js
 
@@ -31,4 +31,4 @@ lint:
 lint-fix:
 	npx eslint . --fix
 
-.PHONY: setup install rules publish link brain-games brain-even lint lint-fix
+.PHONY: setup install +x-chmod publish link brain-games brain-even brain-calc brain-gcd lint lint-fix
