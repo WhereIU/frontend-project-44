@@ -1,19 +1,18 @@
-import gameLogic from '../game-core/logic.js';
+import gameLogic from '../game-engine/logic.js';
 import randomNumber from '../helpers/get-random-number.js';
-import getProgression from '../helpers/progression.js';
+import useProgression from '../helpers/progression.js';
 
-const minProgressionNum = 5;
-const countProgressonNum = 5;
+// progressionMode parameters
+const minLen = 5;
+const rangeLen = 5;
 const randomLen = 100;
 let countAnswers = 0;
 let flag = true;
 
-// progressionMode parameters
-
-console.log('What is the result of the expression?');
+console.log('What number is missing in the progression?');
 do {
-  const progressionLen = randomNumber(countProgressonNum, minProgressionNum);
-  const [question, rightAnswer] = getProgression(progressionLen, randomLen);
+  const progressionLen = randomNumber(rangeLen, minLen);
+  const [question, rightAnswer] = useProgression(progressionLen, randomLen);
   countAnswers += 1;
   flag = (gameLogic(question, rightAnswer, countAnswers));
 } while (flag);

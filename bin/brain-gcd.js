@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/games/gcd-mode.js';
+import '../src/games/gcd-mode.js'; // gcdMode

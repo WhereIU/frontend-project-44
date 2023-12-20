@@ -1,19 +1,18 @@
-import gameLogic from '../game-core/logic.js';
+import gameLogic from '../game-engine/logic.js';
 import randomNumber from '../helpers/get-random-number.js';
-import gcd from '../helpers/get-gcd.js';
+import getGcd from '../helpers/get-gcd.js';
 
+// gcd mode parameters
 const maxNumber = 100;
 let countAnswers = 0;
 let flag = true;
 
-// gcdMode parameters
-
-console.log('What is the result of the expression?');
+console.log('Find the greatest common divisor of given numbers.');
 do {
   const firstNum = randomNumber(maxNumber);
   const secondNum = randomNumber(maxNumber);
   const question = `${firstNum} ${secondNum}`;
-  const rightAnswer = gcd(firstNum, secondNum).toString();
+  const rightAnswer = getGcd(firstNum, secondNum).toString();
   countAnswers += 1;
   flag = (gameLogic(question, rightAnswer, countAnswers));
 } while (flag);

@@ -1,12 +1,12 @@
 import randomNumber from './get-random-number.js';
 
-export default (progressionLen, maxNumber) => {
+export default (progressionLen, randomLen) => {
   const progression = [];
-  const firstNum = randomNumber(maxNumber);
-  const step = randomNumber(maxNumber);
-  const hidenIndex = randomNumber(progressionLen);
+  const firstNum = randomNumber(randomLen);
+  const step = randomNumber(randomLen);
+  const hidenIndex = randomNumber(progressionLen - 1); // index=-1
   let hidenNum;
-  for (let i = 0; i <= progressionLen; i += 1) {
+  for (let i = 0; i < progressionLen; i += 1) {
     if (i !== hidenIndex) {
       progression.push(firstNum + step * i);
     } else {

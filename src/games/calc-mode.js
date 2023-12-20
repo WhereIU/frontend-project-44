@@ -1,19 +1,18 @@
-import gameLogic from '../game-core/logic.js';
+import gameLogic from '../game-engine/logic.js';
 import randomNumber from '../helpers/get-random-number.js';
-import calculate from '../helpers/get-сalc-result.js';
+import calculate from '../helpers/calculate-result.js';
 
+// calc mode parameters
 const maxNumber = 100;
-const maxSign = 2;
+const signs = ['+', '-', '*'];
+const maxSign = 2; // [minSign-maxSign]
 let countAnswers = 0;
 let flag = true;
-const signs = ['+', '-', '*'];
-
-// calcMode parameters
 
 console.log('What is the result of the expression?');
 do {
   const firstNum = randomNumber(maxNumber);
-  const sign = signs[randomNumber(maxSign)];
+  const sign = signs[randomNumber(maxSign, 0)]; // randomNumber(maxSign, minSign)
   const secondNum = randomNumber(maxNumber);
   const question = `${firstNum} ${sign} ${secondNum}`;
   const rightAnswer = calculate(sign, firstNum, secondNum).toString();

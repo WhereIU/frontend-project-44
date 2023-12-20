@@ -7,6 +7,6 @@ export default (sign, firstNum, secondNum) => {
     case '*':
       return firstNum * secondNum;
     default:
-      return -0;
+      return NaN;
   }
 };
