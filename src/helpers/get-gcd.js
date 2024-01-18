@@ -19,8 +19,8 @@ export default (firstNum, secondNum) => {
   let firstHalfNumbers = Math.floor(numbers[0] / 2);
   const i = 2;
   for (; i <= firstHalfNumbers; firstHalfNumbers -= 1) { // gcd should be in range 2 <= minNum/2
-    if (numbers[0] % i === 0 && numbers[1] % i === 0) {
-      return i;
+    if (numbers[0] % firstHalfNumbers === 0 && numbers[1] % firstHalfNumbers === 0) {
+      return firstHalfNumbers;
     }
   }
   return 1; // gcs of both is 1
