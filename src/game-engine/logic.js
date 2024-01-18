@@ -1,4 +1,4 @@
-import userName from './meet-user.js';
+import userName from './cli.js';
 import getUserAnswer from './ask-question.js';
 
 export default (question, rightAnswer, countAnswers) => {
