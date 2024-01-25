@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/games/is-even-mode.js'; // isEvenMode
+import '../src/game-modes/is-even-mode.js'; // isEvenMode

@@ -3,7 +3,7 @@ export default (firstNum, secondNum) => {
     return firstNum;
   }
 
-  const numbers = []; // [min, max]
+  const numbers = []; // going to be [min, max]
   if (firstNum < secondNum) {
     numbers.push(firstNum);
     numbers.push(secondNum);
@@ -16,12 +16,12 @@ export default (firstNum, secondNum) => {
     return numbers[0]; // minNum is gcd of maxNum
   }
 
-  let firstHalfNumbers = Math.floor(numbers[0] / 2);
-  const i = 2;
-  for (; i <= firstHalfNumbers; firstHalfNumbers -= 1) { // gcd should be in range 2 <= minNum/2
-    if (numbers[0] % firstHalfNumbers === 0 && numbers[1] % firstHalfNumbers === 0) {
-      return firstHalfNumbers;
+  let possibleDivisor = Math.floor(numbers[0] / 2); // in first half of minNum
+  for (const minCheck = 2; possibleDivisor >= minCheck; possibleDivisor -= 1) {
+    // gcd should be in range 2 <= minNum/2 of check
+    if (numbers[0] % possibleDivisor === 0 && numbers[1] % possibleDivisor === 0) {
+      return possibleDivisor;
     }
   }
-  return 1; // gcs of both is 1
+  return 1; // gcd is the lowest = 1;
 };

@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/games/progression-mode.js'; // progressionMode
+import '../src/game-modes/progression-mode.js'; // progressionMode

@@ -1,5 +1,5 @@
-export default (sign, firstNum, secondNum) => {
-  switch (sign) {
+export default (firstNum, expressionSign, secondNum) => {
+  switch (expressionSign) {
     case '+':
       return firstNum + secondNum;
     case '-':
