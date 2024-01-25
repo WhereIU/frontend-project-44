@@ -1,3 +1,10 @@
+Welcome to the brain-games project!
+
+How to install and check:
+
+Here u can play some popular mode of games:
+
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/WhereIU/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/WhereIU/frontend-project-44/actions)
 

@@ -1,4 +1,4 @@
-import gameLogic from '../game-engine/logic.js';
+import gameResult from '../helpers/gameResult.js';
 import randomNumber from '../helpers/get-random-number.js';
 import isPrime from '../helpers/is-prime.js';
 
@@ -12,5 +12,5 @@ do {
   const question = randomNumber(maxNumber);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   countAnswers += 1;
-  flag = (gameLogic(question, rightAnswer, countAnswers));
+  flag = (gameResult(question, rightAnswer, countAnswers));
 } while (flag);

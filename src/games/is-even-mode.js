@@ -1,4 +1,4 @@
-import gameLogic from '../game-engine/logic.js';
+import gameResult from '../helpers/gameResult.js';
 import randomNumber from '../helpers/get-random-number.js';
 import getRemainder from '../helpers/get-remainder.js';
 
@@ -13,5 +13,5 @@ do {
   const divisor = 2;
   const rightAnswer = getRemainder(question, divisor) ? 'no' : 'yes'; // 1 = no, 0 = yes
   countAnswers += 1;
-  flag = (gameLogic(question, rightAnswer, countAnswers));
+  flag = (gameResult(question, rightAnswer, countAnswers));
 } while (flag);

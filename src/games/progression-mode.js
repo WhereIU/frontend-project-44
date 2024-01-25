@@ -1,4 +1,4 @@
-import gameLogic from '../game-engine/logic.js';
+import gameResult from '../helpers/gameResult.js';
 import randomNumber from '../helpers/get-random-number.js';
 import useProgression from '../helpers/useProgression.js';
 
@@ -14,5 +14,5 @@ do {
   const progressionLen = randomNumber(rangeLen, minLen);
   const [question, rightAnswer] = useProgression(progressionLen, maxRandomBetween);
   countAnswers += 1;
-  flag = (gameLogic(question, rightAnswer, countAnswers));
+  flag = (gameResult(question, rightAnswer, countAnswers));
 } while (flag);

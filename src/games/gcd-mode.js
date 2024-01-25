@@ -1,4 +1,4 @@
-import gameLogic from '../game-engine/logic.js';
+import gameResult from '../helpers/gameResult.js';
 import randomNumber from '../helpers/get-random-number.js';
 import getGcd from '../helpers/get-gcd.js';
 
@@ -14,5 +14,5 @@ do {
   const question = `${firstNum} ${secondNum}`;
   const rightAnswer = getGcd(firstNum, secondNum).toString();
   countAnswers += 1;
-  flag = (gameLogic(question, rightAnswer, countAnswers));
+  flag = (gameResult(question, rightAnswer, countAnswers));
 } while (flag);
