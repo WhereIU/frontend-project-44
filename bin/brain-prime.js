@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/game-modes/is-prime-mode.js'; // primeMode
+import '../src/games/is-prime-mode.js'; // primeMode
