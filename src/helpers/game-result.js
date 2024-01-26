@@ -1,19 +1,19 @@
-import userName from './cli.js';
-import getUserAnswer from './ask-question.js';
+import playerName from './cli.js';
+import getPlayerAnswer from './ask-question.js';
 
 export default (question, rightAnswer, countAnswers) => {
-  const userAnswer = getUserAnswer(question);
-  if (userAnswer === rightAnswer) {
+  const playerAnswer = getPlayerAnswer(question);
+  if (playerAnswer === rightAnswer) {
     console.log('Correct!');
     if (countAnswers === 3) {
-      console.log(`Congratulations, ${userName}!`);
+      console.log(`Congratulations, ${playerName}!`);
       return false;
     }
     return true;
   }
 
   // not right answer
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-  console.log(`Let's try again, ${userName}!`);
+  console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+  console.log(`Let's try again, ${playerName}!`);
   return false;
 };
