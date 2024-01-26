@@ -12,6 +12,7 @@ How to install and check brain-games:
 [![asciicast](https://asciinema.org/a/633192.svg)](https://asciinema.org/a/633192)
 
 Here u can play some popular mode with those modes:
+
     brain-even:
 [![asciicast](https://asciinema.org/a/633197.svg)](https://asciinema.org/a/633197)
 
