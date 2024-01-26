@@ -2,7 +2,7 @@ Welcome to the brain-games project!
 
 minimal requirements:
     
-    -500mb hard-disk memory
+    -30mb hard-disk memory
     -100mb RAM memory
     -intel core i1 any
     -any graphics card
