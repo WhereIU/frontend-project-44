@@ -1,6 +1,6 @@
-import gameResult from '../helpers/gameResult.js';
+import gameResult from '../helpers/game-result.js';
 import randomNumber from '../helpers/get-random-number.js';
-import useProgression from '../helpers/useProgression.js';
+import useProgression from '../helpers/use-progression.js';
 
 // progressionMode parameters
 const minLen = 5;

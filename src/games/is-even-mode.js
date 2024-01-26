@@ -1,4 +1,4 @@
-import gameResult from '../helpers/gameResult.js';
+import gameResult from '../helpers/game-result.js';
 import randomNumber from '../helpers/get-random-number.js';
 import getRemainder from '../helpers/get-remainder.js';
 
