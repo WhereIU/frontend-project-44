@@ -1,8 +1,4 @@
 export default (firstNum, secondNum) => {
-  if (firstNum === secondNum) {
-    return firstNum;
-  }
-
   const numbers = []; // going to be [min, max]
   if (firstNum < secondNum) {
     numbers.push(firstNum);
