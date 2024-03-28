@@ -1,4 +1,4 @@
-import gameResult from '../helpers/game-result.js';
+import startGame from '../helpers/index.js';
 import randomNumber from '../helpers/get-random-number.js';
 import useProgression from '../helpers/use-progression.js';
 
@@ -6,13 +6,12 @@ import useProgression from '../helpers/use-progression.js';
 const minLen = 5;
 const rangeLen = 5;
 const maxRandomBetween = 100;
-let countAnswers = 0;
-let flag = true;
+const rule = 'What number is missing in the progression?';
 
-console.log('What number is missing in the progression?');
-do {
+const getProgressionQuestion = () => {
   const progressionLen = randomNumber(rangeLen, minLen);
   const [question, rightAnswer] = useProgression(progressionLen, maxRandomBetween);
-  countAnswers += 1;
-  flag = (gameResult(question, rightAnswer, countAnswers));
-} while (flag);
+  return [question, rightAnswer];
+};
+
+startGame(rule, getProgressionQuestion);

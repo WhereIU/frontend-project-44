@@ -1,16 +1,15 @@
-import gameResult from '../helpers/game-result.js';
+import startGame from '../helpers/index.js';
 import randomNumber from '../helpers/get-random-number.js';
 import isPrime from '../helpers/is-prime.js';
 
 // isPrimeMode parameters
 const maxNumber = 100;
-let countAnswers = 0;
-let flag = true;
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-do {
+const getIsPrimeQuestion = () => {
   const question = randomNumber(maxNumber);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
-  countAnswers += 1;
-  flag = (gameResult(question, rightAnswer, countAnswers));
-} while (flag);
+  return [question, rightAnswer];
+};
+
+startGame(rule, getIsPrimeQuestion);
