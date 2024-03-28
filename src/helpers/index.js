@@ -1,5 +1,5 @@
+import readlineSync from 'readline-sync';
 import playerName from './cli.js';
-import getPlayerAnswer from './ask-question.js';
 
 let countAnswers = 0;
 export default (rule, getRoundValues) => {
@@ -7,7 +7,8 @@ export default (rule, getRoundValues) => {
 
   while (true) {
     const [question, rightAnswer] = getRoundValues();
-    const playerAnswer = getPlayerAnswer(question);
+    console.log(`Question: ${question}`);
+    const playerAnswer = readlineSync.question('Your answer: ');
 
     if (playerAnswer === rightAnswer) {
       console.log('Correct!');
