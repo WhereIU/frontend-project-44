@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import playerName from './cli.js';
+import playerName from './helpers/cli.js';
 
 let countAnswers = 0;
 export default (rule, getRoundValues) => {

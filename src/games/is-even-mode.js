@@ -1,4 +1,4 @@
-import startGame from '../helpers/index.js';
+import startGame from '../index.js';
 import randomNumber from '../helpers/get-random-number.js';
 
 // isEvenMode parameters
